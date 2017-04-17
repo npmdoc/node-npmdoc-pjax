@@ -1,0 +1,1068 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/MoOx/pjax#readme"
+
+    >pjax (v0.2.4)</a>
+</h1>
+<h4>Easily enable fast Ajax navigation on any website (using pushState +  xhr)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax">module pjax</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.clone">
+            function <span class="apidocSignatureSpan">pjax.</span>clone
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.eval_script">
+            function <span class="apidocSignatureSpan">pjax.</span>eval_script
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.execute_scripts">
+            function <span class="apidocSignatureSpan">pjax.</span>execute_scripts
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.foreach_els">
+            function <span class="apidocSignatureSpan">pjax.</span>foreach_els
+            <span class="apidocSignatureSpan">(els, fn, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.foreach_selectors">
+            function <span class="apidocSignatureSpan">pjax.</span>foreach_selectors
+            <span class="apidocSignatureSpan">(selectors, cb, context, DOMcontext)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.is_supported">
+            function <span class="apidocSignatureSpan">pjax.</span>is_supported
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.reload">
+            function <span class="apidocSignatureSpan">pjax.</span>reload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.request">
+            function <span class="apidocSignatureSpan">pjax.</span>request
+            <span class="apidocSignatureSpan">(location, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.switches_selectors">
+            function <span class="apidocSignatureSpan">pjax.</span>switches_selectors
+            <span class="apidocSignatureSpan">(switches, switchesOptions, selectors, fromEl, toEl, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.uniqueid">
+            function <span class="apidocSignatureSpan">pjax.</span>uniqueid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pjax.</span>switches</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.clone">module pjax.clone</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.clone.clone">
+            function <span class="apidocSignatureSpan">pjax.</span>clone
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.eval_script">module pjax.eval_script</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.eval_script.eval_script">
+            function <span class="apidocSignatureSpan">pjax.</span>eval_script
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.execute_scripts">module pjax.execute_scripts</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.execute_scripts.execute_scripts">
+            function <span class="apidocSignatureSpan">pjax.</span>execute_scripts
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.foreach_els">module pjax.foreach_els</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.foreach_els.foreach_els">
+            function <span class="apidocSignatureSpan">pjax.</span>foreach_els
+            <span class="apidocSignatureSpan">(els, fn, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.foreach_selectors">module pjax.foreach_selectors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.foreach_selectors.foreach_selectors">
+            function <span class="apidocSignatureSpan">pjax.</span>foreach_selectors
+            <span class="apidocSignatureSpan">(selectors, cb, context, DOMcontext)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.is_supported">module pjax.is_supported</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.is_supported.is_supported">
+            function <span class="apidocSignatureSpan">pjax.</span>is_supported
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.reload">module pjax.reload</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.reload.reload">
+            function <span class="apidocSignatureSpan">pjax.</span>reload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.request">module pjax.request</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.request.request">
+            function <span class="apidocSignatureSpan">pjax.</span>request
+            <span class="apidocSignatureSpan">(location, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.switches">module pjax.switches</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.switches.innerHTML">
+            function <span class="apidocSignatureSpan">pjax.switches.</span>innerHTML
+            <span class="apidocSignatureSpan">(oldEl, newEl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.switches.outerHTML">
+            function <span class="apidocSignatureSpan">pjax.switches.</span>outerHTML
+            <span class="apidocSignatureSpan">(oldEl, newEl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.switches.sideBySide">
+            function <span class="apidocSignatureSpan">pjax.switches.</span>sideBySide
+            <span class="apidocSignatureSpan">(oldEl, newEl, options, switchOptions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.switches_selectors">module pjax.switches_selectors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.switches_selectors.switches_selectors">
+            function <span class="apidocSignatureSpan">pjax.</span>switches_selectors
+            <span class="apidocSignatureSpan">(switches, switchesOptions, selectors, fromEl, toEl, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pjax.uniqueid">module pjax.uniqueid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pjax.uniqueid.uniqueid">
+            function <span class="apidocSignatureSpan">pjax.</span>uniqueid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax" id="apidoc.module.pjax">module pjax</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.clone" id="apidoc.element.pjax.clone">
+        function <span class="apidocSignatureSpan">pjax.</span>clone
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function (obj) {
+  if (null === obj || &#x22;object&#x22; != typeof obj) {
+    return obj
+  }
+  var copy = obj.constructor()
+  for (var attr in obj) {
+    if (obj.hasOwnProperty(attr)) {
+      copy[attr] = obj[attr]
+    }
+  }
+  return copy
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.eval_script" id="apidoc.element.pjax.eval_script">
+        function <span class="apidocSignatureSpan">pjax.</span>eval_script
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eval_script = function (el) {
+  // console.log(&#x22;going to execute script&#x22;, el)
+
+  var code = (el.text || el.textContent || el.innerHTML || &#x22;&#x22;)
+  var head = document.querySelector(&#x22;head&#x22;) || document.documentElement
+  var script = document.createElement(&#x22;script&#x22;)
+
+  if (code.match(&#x22;document.write&#x22;)) {
+    if (console &#x26;&#x26; console.log) {
+      console.log(&#x22;Script contains document.write. Can’t be executed correctly. Code skipped &#x22;, el)
+    }
+    return false
+  }
+
+  script.type = &#x22;text/javascript&#x22;
+  try {
+    script.appendChild(document.createTextNode(code))
+  }
+  catch (e) {
+    // old IEs have funky script nodes
+    script.text = code
+  }
+
+  // execute
+  head.insertBefore(script, head.firstChild)
+  head.removeChild(script) // avoid pollution
+
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.execute_scripts" id="apidoc.element.pjax.execute_scripts">
+        function <span class="apidocSignatureSpan">pjax.</span>execute_scripts
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">execute_scripts = function (el) {
+  // console.log(&#x22;going to execute scripts for &#x22;, el)
+  forEachEls(el.querySelectorAll(&#x22;script&#x22;), function(script) {
+    if (!script.type || script.type.toLowerCase() === &#x22;text/javascript&#x22;) {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script)
+      }
+      evalScript(script)
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.foreach_els" id="apidoc.element.pjax.foreach_els">
+        function <span class="apidocSignatureSpan">pjax.</span>foreach_els
+        <span class="apidocSignatureSpan">(els, fn, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">foreach_els = function (els, fn, context) {
+  if (els instanceof HTMLCollection || els instanceof NodeList || els instanceof Array) {
+    return Array.prototype.forEach.call(els, fn, context)
+  }
+  // assume simple dom element
+  return fn.call(context, els)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.foreach_selectors" id="apidoc.element.pjax.foreach_selectors">
+        function <span class="apidocSignatureSpan">pjax.</span>foreach_selectors
+        <span class="apidocSignatureSpan">(selectors, cb, context, DOMcontext)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">foreach_selectors = function (selectors, cb, context, DOMcontext) {
+  DOMcontext = DOMcontext || document
+  selectors.forEach(function(selector) {
+    forEachEls(DOMcontext.querySelectorAll(selector), cb, context)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.is_supported" id="apidoc.element.pjax.is_supported">
+        function <span class="apidocSignatureSpan">pjax.</span>is_supported
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is_supported = function () {
+  // Borrowed wholesale from https://github.com/defunkt/jquery-pjax
+  return window.history &#x26;&#x26;
+    window.history.pushState &#x26;&#x26;
+    window.history.replaceState &#x26;&#x26;
+    // pushState isn’t reliable on iOS until 5.
+    !navigator.userAgent.match(/((iPod|iPhone|iPad).+\bOS\s+[1-4]\D|WebApps\/.+CFNetwork)/)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.reload" id="apidoc.element.pjax.reload">
+        function <span class="apidocSignatureSpan">pjax.</span>reload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reload = function () {
+  window.location.reload()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+module.exports = function() {
+  window.location.<span class="apidocCodeKeywordSpan">reload</span>()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.request" id="apidoc.element.pjax.request">
+        function <span class="apidocSignatureSpan">pjax.</span>request
+        <span class="apidocSignatureSpan">(location, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function (location, callback) {
+  var request = new XMLHttpRequest()
+
+  request.onreadystatechange = function() {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        callback(request.responseText, request)
+      }
+      else {
+        callback(null, request)
+      }
+    }
+  }
+
+  // Add a timestamp as part of the query string if cache busting is enabled
+  if (this.options.cacheBust) {
+    location += (!/[?&#x26;]/.test(location) ? &#x22;?&#x22; : &#x22;&#x26;&#x22;) + new Date().getTime()
+  }
+
+  request.open(&#x22;GET&#x22;, location, true)
+  request.setRequestHeader(&#x22;X-Requested-With&#x22;, &#x22;XMLHttpRequest&#x22;)
+  request.send(null)
+  return request
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.switches_selectors" id="apidoc.element.pjax.switches_selectors">
+        function <span class="apidocSignatureSpan">pjax.</span>switches_selectors
+        <span class="apidocSignatureSpan">(switches, switchesOptions, selectors, fromEl, toEl, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">switches_selectors = function (switches, switchesOptions, selectors, fromEl, toEl, options) {
+  selectors.forEach(function(selector) {
+    var newEls = fromEl.querySelectorAll(selector)
+    var oldEls = toEl.querySelectorAll(selector)
+    if (this.log) {
+      this.log(&#x22;Pjax switch&#x22;, selector, newEls, oldEls)
+    }
+    if (newEls.length !== oldEls.length) {
+      // forEachEls(newEls, function(el) {
+      //   this.log(&#x22;newEl&#x22;, el, el.outerHTML)
+      // }, this)
+      // forEachEls(oldEls, function(el) {
+      //   this.log(&#x22;oldEl&#x22;, el, el.outerHTML)
+      // }, this)
+      throw &#x22;DOM doesn’t look the same on new loaded page: ’&#x22; + selector + &#x22;’ - new &#x22; + newEls.length + &#x22;, old &#x22; + oldEls.length
+    }
+
+    forEachEls(newEls, function(newEl, i) {
+      var oldEl = oldEls[i]
+      if (this.log) {
+        this.log(&#x22;newEl&#x22;, newEl, &#x22;oldEl&#x22;, oldEl)
+      }
+      if (switches[selector]) {
+        switches[selector].bind(this)(oldEl, newEl, options, switchesOptions[selector])
+      }
+      else {
+        defaultSwitches.outerHTML.bind(this)(oldEl, newEl, options)
+      }
+    }, this)
+  }, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.uniqueid" id="apidoc.element.pjax.uniqueid">
+        function <span class="apidocSignatureSpan">pjax.</span>uniqueid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uniqueid = function () {
+  var id = (&#x22;pjax&#x22; + (new Date().getTime())) + &#x22;_&#x22; + counter
+  counter++
+  return id
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.clone" id="apidoc.module.pjax.clone">module pjax.clone</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.clone.clone" id="apidoc.element.pjax.clone.clone">
+        function <span class="apidocSignatureSpan">pjax.</span>clone
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function (obj) {
+  if (null === obj || &#x22;object&#x22; != typeof obj) {
+    return obj
+  }
+  var copy = obj.constructor()
+  for (var attr in obj) {
+    if (obj.hasOwnProperty(attr)) {
+      copy[attr] = obj[attr]
+    }
+  }
+  return copy
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.eval_script" id="apidoc.module.pjax.eval_script">module pjax.eval_script</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.eval_script.eval_script" id="apidoc.element.pjax.eval_script.eval_script">
+        function <span class="apidocSignatureSpan">pjax.</span>eval_script
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eval_script = function (el) {
+  // console.log(&#x22;going to execute script&#x22;, el)
+
+  var code = (el.text || el.textContent || el.innerHTML || &#x22;&#x22;)
+  var head = document.querySelector(&#x22;head&#x22;) || document.documentElement
+  var script = document.createElement(&#x22;script&#x22;)
+
+  if (code.match(&#x22;document.write&#x22;)) {
+    if (console &#x26;&#x26; console.log) {
+      console.log(&#x22;Script contains document.write. Can’t be executed correctly. Code skipped &#x22;, el)
+    }
+    return false
+  }
+
+  script.type = &#x22;text/javascript&#x22;
+  try {
+    script.appendChild(document.createTextNode(code))
+  }
+  catch (e) {
+    // old IEs have funky script nodes
+    script.text = code
+  }
+
+  // execute
+  head.insertBefore(script, head.firstChild)
+  head.removeChild(script) // avoid pollution
+
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.execute_scripts" id="apidoc.module.pjax.execute_scripts">module pjax.execute_scripts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.execute_scripts.execute_scripts" id="apidoc.element.pjax.execute_scripts.execute_scripts">
+        function <span class="apidocSignatureSpan">pjax.</span>execute_scripts
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">execute_scripts = function (el) {
+  // console.log(&#x22;going to execute scripts for &#x22;, el)
+  forEachEls(el.querySelectorAll(&#x22;script&#x22;), function(script) {
+    if (!script.type || script.type.toLowerCase() === &#x22;text/javascript&#x22;) {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script)
+      }
+      evalScript(script)
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.foreach_els" id="apidoc.module.pjax.foreach_els">module pjax.foreach_els</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.foreach_els.foreach_els" id="apidoc.element.pjax.foreach_els.foreach_els">
+        function <span class="apidocSignatureSpan">pjax.</span>foreach_els
+        <span class="apidocSignatureSpan">(els, fn, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">foreach_els = function (els, fn, context) {
+  if (els instanceof HTMLCollection || els instanceof NodeList || els instanceof Array) {
+    return Array.prototype.forEach.call(els, fn, context)
+  }
+  // assume simple dom element
+  return fn.call(context, els)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.foreach_selectors" id="apidoc.module.pjax.foreach_selectors">module pjax.foreach_selectors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.foreach_selectors.foreach_selectors" id="apidoc.element.pjax.foreach_selectors.foreach_selectors">
+        function <span class="apidocSignatureSpan">pjax.</span>foreach_selectors
+        <span class="apidocSignatureSpan">(selectors, cb, context, DOMcontext)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">foreach_selectors = function (selectors, cb, context, DOMcontext) {
+  DOMcontext = DOMcontext || document
+  selectors.forEach(function(selector) {
+    forEachEls(DOMcontext.querySelectorAll(selector), cb, context)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.is_supported" id="apidoc.module.pjax.is_supported">module pjax.is_supported</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.is_supported.is_supported" id="apidoc.element.pjax.is_supported.is_supported">
+        function <span class="apidocSignatureSpan">pjax.</span>is_supported
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is_supported = function () {
+  // Borrowed wholesale from https://github.com/defunkt/jquery-pjax
+  return window.history &#x26;&#x26;
+    window.history.pushState &#x26;&#x26;
+    window.history.replaceState &#x26;&#x26;
+    // pushState isn’t reliable on iOS until 5.
+    !navigator.userAgent.match(/((iPod|iPhone|iPad).+\bOS\s+[1-4]\D|WebApps\/.+CFNetwork)/)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.reload" id="apidoc.module.pjax.reload">module pjax.reload</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.reload.reload" id="apidoc.element.pjax.reload.reload">
+        function <span class="apidocSignatureSpan">pjax.</span>reload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reload = function () {
+  window.location.reload()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+module.exports = function() {
+  window.location.<span class="apidocCodeKeywordSpan">reload</span>()
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.request" id="apidoc.module.pjax.request">module pjax.request</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.request.request" id="apidoc.element.pjax.request.request">
+        function <span class="apidocSignatureSpan">pjax.</span>request
+        <span class="apidocSignatureSpan">(location, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function (location, callback) {
+  var request = new XMLHttpRequest()
+
+  request.onreadystatechange = function() {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        callback(request.responseText, request)
+      }
+      else {
+        callback(null, request)
+      }
+    }
+  }
+
+  // Add a timestamp as part of the query string if cache busting is enabled
+  if (this.options.cacheBust) {
+    location += (!/[?&#x26;]/.test(location) ? &#x22;?&#x22; : &#x22;&#x26;&#x22;) + new Date().getTime()
+  }
+
+  request.open(&#x22;GET&#x22;, location, true)
+  request.setRequestHeader(&#x22;X-Requested-With&#x22;, &#x22;XMLHttpRequest&#x22;)
+  request.send(null)
+  return request
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.switches" id="apidoc.module.pjax.switches">module pjax.switches</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.switches.innerHTML" id="apidoc.element.pjax.switches.innerHTML">
+        function <span class="apidocSignatureSpan">pjax.switches.</span>innerHTML
+        <span class="apidocSignatureSpan">(oldEl, newEl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">innerHTML = function (oldEl, newEl) {
+  oldEl.innerHTML = newEl.innerHTML
+  oldEl.className = newEl.className
+  this.onSwitch()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.switches.outerHTML" id="apidoc.element.pjax.switches.outerHTML">
+        function <span class="apidocSignatureSpan">pjax.switches.</span>outerHTML
+        <span class="apidocSignatureSpan">(oldEl, newEl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outerHTML = function (oldEl, newEl) {
+  oldEl.outerHTML = newEl.outerHTML
+  this.onSwitch()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.switches.sideBySide" id="apidoc.element.pjax.switches.sideBySide">
+        function <span class="apidocSignatureSpan">pjax.switches.</span>sideBySide
+        <span class="apidocSignatureSpan">(oldEl, newEl, options, switchOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sideBySide = function (oldEl, newEl, options, switchOptions) {
+  var forEach = Array.prototype.forEach
+  var elsToRemove = []
+  var elsToAdd = []
+  var fragToAppend = document.createDocumentFragment()
+  // height transition are shitty on safari
+  // so commented for now (until I found something ?)
+  // var relevantHeight = 0
+  var animationEventNames = &#x22;animationend webkitAnimationEnd MSAnimationEnd oanimationend&#x22;
+  var animatedElsNumber = 0
+  var sexyAnimationEnd = function(e) {
+        if (e.target != e.currentTarget) {
+          // end triggered by an animation on a child
+          return
+        }
+
+        animatedElsNumber--
+        if (animatedElsNumber &#x3c;= 0 &#x26;&#x26; elsToRemove) {
+          elsToRemove.forEach(function(el) {
+            // browsing quickly can make the el
+            // already removed by last page update ?
+            if (el.parentNode) {
+              el.parentNode.removeChild(el)
+            }
+          })
+
+          elsToAdd.forEach(function(el) {
+            el.className = el.className.replace(el.getAttribute(&#x22;data-pjax-classes&#x22;), &#x22;&#x22;)
+            el.removeAttribute(&#x22;data-pjax-classes&#x22;)
+            // Pjax.off(el, animationEventNames, sexyAnimationEnd, true)
+          })
+
+          elsToAdd = null // free memory
+          elsToRemove = null // free memory
+
+          // assume the height is now useless (avoid bug since there is overflow hidden on the parent)
+          // oldEl.style.height = &#x22;auto&#x22;
+
+          // this is to trigger some repaint (example: picturefill)
+          this.onSwitch()
+          // Pjax.trigger(window, &#x22;scroll&#x22;)
+        }
+      }.bind(this)
+
+  // Force height to be able to trigger css animation
+  // here we get the relevant height
+  // oldEl.parentNode.appendChild(newEl)
+  // relevantHeight = newEl.getBoundingClientRect().height
+  // oldEl.parentNode.removeChild(newEl)
+  // oldEl.style.height = oldEl.getBoundingClientRect().height + &#x22;px&#x22;
+
+  switchOptions = switchOptions || {}
+
+  forEach.call(oldEl.childNodes, function(el) {
+    elsToRemove.push(el)
+    if (el.classList &#x26;&#x26; !el.classList.contains(&#x22;js-Pjax-remove&#x22;)) {
+      // for fast switch, clean element that just have been added, &#x26; not cleaned yet.
+      if (el.hasAttribute(&#x22;data-pjax-classes&#x22;)) {
+        el.className = el.className.replace(el.getAttribute(&#x22;data-pjax-classes&#x22;), &#x22;&#x22;)
+        el.removeAttribute(&#x22;data-pjax-classes&#x22;)
+      }
+      el.classList.add(&#x22;js-Pjax-remove&#x22;)
+      if (switchOptions.callbacks &#x26;&#x26; switchOptions.callbacks.removeElement) {
+        switchOptions.callbacks.removeElement(el)
+      }
+      if (switchOptions.classNames) {
+        el.className += &#x22; &#x22; + switchOptions.classNames.remove + &#x22; &#x22; + (options.backward ? switchOptions.classNames.backward : switchOptions
+.classNames.forward)
+      }
+      animatedElsNumber++
+      on(el, animationEventNames, sexyAnimationEnd, true)
+    }
+  })
+
+  forEach.call(newEl.childNodes, function(el) {
+    if (el.classList) {
+      var addClasses = &#x22;&#x22;
+      if (switchOptions.classNames) {
+        addClasses = &#x22; js-Pjax-add &#x22; + switchOptions.classNames.add + &#x22; &#x22; + (options.backward ? switchOptions.classNames.forward
+ : switchOptions.classNames.backward)
+      }
+      if (switchOptions.callbacks &#x26;&#x26; switchOptions.callbacks.addElement) {
+        switchOptions.callbacks.addElement(el)
+      }
+      el.className += addClasses
+      el.setAttribute(&#x22;data-pjax-classes&#x22;, addClasses)
+      elsToAdd.push(el)
+      fragToAppend.appendChild(el)
+      animatedElsNumber++
+      on(el, animationEventNames, sexyAnimationEnd, true)
+    }
+  })
+
+  // pass all className of the parent
+  oldEl.className = newEl.className
+  oldEl.appendChild(fragToAppend)
+
+  // oldEl.style.height = relevantHeight + &#x22;px&#x22;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.switches_selectors" id="apidoc.module.pjax.switches_selectors">module pjax.switches_selectors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.switches_selectors.switches_selectors" id="apidoc.element.pjax.switches_selectors.switches_selectors">
+        function <span class="apidocSignatureSpan">pjax.</span>switches_selectors
+        <span class="apidocSignatureSpan">(switches, switchesOptions, selectors, fromEl, toEl, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">switches_selectors = function (switches, switchesOptions, selectors, fromEl, toEl, options) {
+  selectors.forEach(function(selector) {
+    var newEls = fromEl.querySelectorAll(selector)
+    var oldEls = toEl.querySelectorAll(selector)
+    if (this.log) {
+      this.log(&#x22;Pjax switch&#x22;, selector, newEls, oldEls)
+    }
+    if (newEls.length !== oldEls.length) {
+      // forEachEls(newEls, function(el) {
+      //   this.log(&#x22;newEl&#x22;, el, el.outerHTML)
+      // }, this)
+      // forEachEls(oldEls, function(el) {
+      //   this.log(&#x22;oldEl&#x22;, el, el.outerHTML)
+      // }, this)
+      throw &#x22;DOM doesn’t look the same on new loaded page: ’&#x22; + selector + &#x22;’ - new &#x22; + newEls.length + &#x22;, old &#x22; + oldEls.length
+    }
+
+    forEachEls(newEls, function(newEl, i) {
+      var oldEl = oldEls[i]
+      if (this.log) {
+        this.log(&#x22;newEl&#x22;, newEl, &#x22;oldEl&#x22;, oldEl)
+      }
+      if (switches[selector]) {
+        switches[selector].bind(this)(oldEl, newEl, options, switchesOptions[selector])
+      }
+      else {
+        defaultSwitches.outerHTML.bind(this)(oldEl, newEl, options)
+      }
+    }, this)
+  }, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pjax.uniqueid" id="apidoc.module.pjax.uniqueid">module pjax.uniqueid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pjax.uniqueid.uniqueid" id="apidoc.element.pjax.uniqueid.uniqueid">
+        function <span class="apidocSignatureSpan">pjax.</span>uniqueid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uniqueid = function () {
+  var id = (&#x22;pjax&#x22; + (new Date().getTime())) + &#x22;_&#x22; + counter
+  counter++
+  return id
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
