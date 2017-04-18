@@ -1,4 +1,7 @@
-# api documentation for  [pjax (v0.2.4)](https://github.com/MoOx/pjax#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-pjax.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pjax) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pjax.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pjax)
+# npmdoc-pjax
+
+#### api documentation for  [pjax (v0.2.4)](https://github.com/MoOx/pjax#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-pjax.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pjax) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pjax.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pjax)
+
 #### Easily enable fast Ajax navigation on any website (using pushState +  xhr)
 
 [![NPM](https://nodei.co/npm/pjax.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/pjax)
